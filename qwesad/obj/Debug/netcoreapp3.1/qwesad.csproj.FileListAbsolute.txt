@@ -1,0 +1,15 @@
+C:\Users\mirac\source\repos\qwesad\qwesad\bin\Debug\netcoreapp3.1\qwesad.exe
+C:\Users\mirac\source\repos\qwesad\qwesad\bin\Debug\netcoreapp3.1\qwesad.deps.json
+C:\Users\mirac\source\repos\qwesad\qwesad\bin\Debug\netcoreapp3.1\qwesad.runtimeconfig.json
+C:\Users\mirac\source\repos\qwesad\qwesad\bin\Debug\netcoreapp3.1\qwesad.runtimeconfig.dev.json
+C:\Users\mirac\source\repos\qwesad\qwesad\bin\Debug\netcoreapp3.1\qwesad.dll
+C:\Users\mirac\source\repos\qwesad\qwesad\bin\Debug\netcoreapp3.1\qwesad.pdb
+C:\Users\mirac\source\repos\qwesad\qwesad\obj\Debug\netcoreapp3.1\qwesad.csprojAssemblyReference.cache
+C:\Users\mirac\source\repos\qwesad\qwesad\obj\Debug\netcoreapp3.1\qwesad.Form1.resources
+C:\Users\mirac\source\repos\qwesad\qwesad\obj\Debug\netcoreapp3.1\qwesad.csproj.GenerateResource.cache
+C:\Users\mirac\source\repos\qwesad\qwesad\obj\Debug\netcoreapp3.1\qwesad.AssemblyInfoInputs.cache
+C:\Users\mirac\source\repos\qwesad\qwesad\obj\Debug\netcoreapp3.1\qwesad.AssemblyInfo.cs
+C:\Users\mirac\source\repos\qwesad\qwesad\obj\Debug\netcoreapp3.1\qwesad.csproj.CoreCompileInputs.cache
+C:\Users\mirac\source\repos\qwesad\qwesad\obj\Debug\netcoreapp3.1\qwesad.dll
+C:\Users\mirac\source\repos\qwesad\qwesad\obj\Debug\netcoreapp3.1\qwesad.pdb
+C:\Users\mirac\source\repos\qwesad\qwesad\obj\Debug\netcoreapp3.1\qwesad.genruntimeconfig.cache
