@@ -44,6 +44,9 @@ namespace qwesad
             this.button7 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.treeView1 = new System.Windows.Forms.TreeView();
+            this.progressBar1 = new System.Windows.Forms.ProgressBar();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // timer1
@@ -165,11 +168,34 @@ namespace qwesad
             this.treeView1.BeforeExpand += new System.Windows.Forms.TreeViewCancelEventHandler(this.treeView1_BeforeExpand);
             this.treeView1.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeView1_AfterSelect);
             // 
+            // progressBar1
+            // 
+            this.progressBar1.Location = new System.Drawing.Point(661, 44);
+            this.progressBar1.Name = "progressBar1";
+            this.progressBar1.Size = new System.Drawing.Size(220, 42);
+            this.progressBar1.TabIndex = 13;
+            // 
+            // backgroundWorker1
+            // 
+            this.backgroundWorker1.DoWork += new System.ComponentModel.DoWorkEventHandler(this.backgroundWorker1_DoWork);
+            this.backgroundWorker1.ProgressChanged += new System.ComponentModel.ProgressChangedEventHandler(this.backgroundWorker1_ProgressChanged);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(658, 200);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(50, 20);
+            this.label2.TabIndex = 14;
+            this.label2.Text = "label2";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1200, 450);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.treeView1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button7);
@@ -206,6 +232,9 @@ namespace qwesad
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TreeView treeView1;
+        private System.Windows.Forms.ProgressBar progressBar1;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private System.Windows.Forms.Label label2;
     }
 }
 

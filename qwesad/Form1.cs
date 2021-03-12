@@ -18,13 +18,34 @@ namespace qwesad
         DriveInfo[] allDrives = DriveInfo.GetDrives();
         private string currentFolderPath;
         private string newPath;
+       
         public Form1()
         {
+            this.BackColor = Color.FromArgb(5, 163, 255);
             InitializeComponent();
             timer1.Enabled = false;
             timer1.Interval = 3000;
             timer1.Tick += timer1_Tick;
-
+            backgroundWorker1.WorkerReportsProgress = true;
+            backgroundWorker1.WorkerSupportsCancellation = true;
+            backgroundWorker1.ProgressChanged += backgroundWorker1_ProgressChanged;
+            backgroundWorker1.DoWork += backgroundWorker1_DoWork;
+        }
+        void Copyfile(string source, string des)
+        {
+            
+            FileStream fsout = new FileStream(des, FileMode.Create);
+            FileStream fsin = new FileStream(source, FileMode.Open);
+            byte[] bt = new byte[1048756];
+            int Readbyte;
+            while ((Readbyte = fsin.Read(bt, 0, bt.Length)) > 0)
+            {
+                fsout.Write(bt, 0, Readbyte);
+                backgroundWorker1.ReportProgress((int)(fsin.Position * 100 / fsin.Length));
+            }
+            
+            fsin.Close();
+            fsout.Close();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -70,20 +91,7 @@ namespace qwesad
             }
         }
 
-        private void button3_Click(object sender, EventArgs e)
-        {
-            currentFolderPath = label1.Text;
-            newPath = textBox4.Text;
-            try
-            {
-
-                File.Copy(currentFolderPath, newPath, true);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Не удается переместить файл из-за исключения: " + ex.Message);
-            }
-        }
+       
 
         private void button4_Click(object sender, EventArgs e)
         {
@@ -91,7 +99,7 @@ namespace qwesad
             {
                 currentFolderPath = label1.Text;
                 newPath = textBox4.Text;
-                File.Move(currentFolderPath, newPath);
+                File.Move(newPath, currentFolderPath);
             }
 
             catch (Exception ex)
@@ -166,6 +174,25 @@ namespace qwesad
             TreeNode MySelectedNode = e.Node;
 
             label1.Text = MySelectedNode.FullPath;
+        }
+
+        private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
+        {
+            
+            currentFolderPath = label1.Text;
+            newPath = textBox4.Text;
+            Copyfile(currentFolderPath, newPath);
+        }
+
+        private void backgroundWorker1_ProgressChanged(object sender, ProgressChangedEventArgs e)
+        {
+            progressBar1.Value = e.ProgressPercentage;
+
+        }
+        private void button3_Click(object sender, EventArgs e)
+        {
+            backgroundWorker1.RunWorkerAsync();
+            
         }
     }
 }
