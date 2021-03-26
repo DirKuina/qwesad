@@ -47,6 +47,7 @@ namespace qwesad
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // timer1
@@ -135,10 +136,11 @@ namespace qwesad
             // 
             this.button6.Location = new System.Drawing.Point(104, 327);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(117, 41);
+            this.button6.Size = new System.Drawing.Size(117, 61);
             this.button6.TabIndex = 9;
-            this.button6.Text = "button6";
+            this.button6.Text = "Отображение инфы";
             this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // button7
             // 
@@ -189,11 +191,21 @@ namespace qwesad
             this.label2.TabIndex = 14;
             this.label2.Text = "label2";
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(465, 76);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(50, 20);
+            this.label3.TabIndex = 15;
+            this.label3.Text = "label3";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1200, 450);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.treeView1);
@@ -211,6 +223,7 @@ namespace qwesad
             this.Controls.Add(this.button1);
             this.Name = "Form1";
             this.Text = "A";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -235,6 +248,7 @@ namespace qwesad
         private System.Windows.Forms.ProgressBar progressBar1;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
     }
 }
 

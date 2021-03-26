@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.IO;
 using System.Windows.Input;
 using System.Windows;
+using ClassLibrary1;
 
 namespace qwesad
 {
@@ -18,7 +19,7 @@ namespace qwesad
         DriveInfo[] allDrives = DriveInfo.GetDrives();
         private string currentFolderPath;
         private string newPath;
-       
+        
         public Form1()
         {
             this.BackColor = Color.FromArgb(5, 163, 255);
@@ -31,6 +32,7 @@ namespace qwesad
             backgroundWorker1.ProgressChanged += backgroundWorker1_ProgressChanged;
             backgroundWorker1.DoWork += backgroundWorker1_DoWork;
         }
+
         void Copyfile(string source, string des)
         {
             
@@ -192,6 +194,19 @@ namespace qwesad
         private void button3_Click(object sender, EventArgs e)
         {
             backgroundWorker1.RunWorkerAsync();
+            
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            ClassLibrary1.Class1 j = new ClassLibrary1.Class1();
+
+            label3.Text = j.Full_name+"-"+j.Number_of_group+ "-"+j.Number_of_lab.ToString()+"-" + j.Number_of_project.ToString();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+            
+        {
             
         }
     }

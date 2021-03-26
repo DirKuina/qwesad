@@ -13,3 +13,6 @@ C:\Users\mirac\source\repos\qwesad\qwesad\obj\Debug\netcoreapp3.1\qwesad.csproj.
 C:\Users\mirac\source\repos\qwesad\qwesad\obj\Debug\netcoreapp3.1\qwesad.dll
 C:\Users\mirac\source\repos\qwesad\qwesad\obj\Debug\netcoreapp3.1\qwesad.pdb
 C:\Users\mirac\source\repos\qwesad\qwesad\obj\Debug\netcoreapp3.1\qwesad.genruntimeconfig.cache
+C:\Users\mirac\source\repos\qwesad\qwesad\bin\Debug\netcoreapp3.1\ClassLibrary1.dll
+C:\Users\mirac\source\repos\qwesad\qwesad\bin\Debug\netcoreapp3.1\ClassLibrary1.pdb
+C:\Users\mirac\source\repos\qwesad\qwesad\obj\Debug\netcoreapp3.1\qwesad.csproj.CopyComplete
