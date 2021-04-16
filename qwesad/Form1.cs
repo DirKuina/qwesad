@@ -209,5 +209,25 @@ namespace qwesad
         {
             
         }
+
+        private void Form1_MouseClick(object sender, MouseEventArgs e)
+        {
+            string Button_condition= " ";
+            
+            switch (e.Button)
+            {
+                case MouseButtons.Right:
+                    Button_condition = "Right";
+                    break;
+                case MouseButtons.Left:
+                    Button_condition = "Left";
+                    break;
+                case MouseButtons.None:
+                    Button_condition = "Najmi";
+                    break;
+            }
+            label4.Text = "He clicked:"+ Button_condition + "Mouse Button";
+        }
+
     }
 }
