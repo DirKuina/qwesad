@@ -14,6 +14,7 @@ using ClassLibrary1;
 using System.Threading;
 using System.Runtime.InteropServices;
 using System.Diagnostics;
+using Microsoft.Win32;
 namespace qwesad
 {
     public partial class Form1 : Form
@@ -266,11 +267,11 @@ namespace qwesad
 
         private void timer2_Tick(object sender, EventArgs e)
         {
-            this.WindowState = FormWindowState.Minimized;
+            /*this.WindowState = FormWindowState.Minimized;
             this.Text = "zxc";
             Thread.Sleep(3000);
             this.WindowState = FormWindowState.Normal;
-            this.Text = "ZXC";
+            this.Text = "ZXC";*/
         }
 
         private void Form1_Shown(object sender, EventArgs e)
@@ -315,12 +316,25 @@ namespace qwesad
                     listBox2.Items.Add(process.Threads.Count);
                 }
             }
-            System.Diagnostics.Process.Start("Calc.exe");
-            IntPtr target_hwnd = FindWindow(null, "Калькулятор");
-            SetWindowText(target_hwnd, "DADADADA");
+            
             IntPtr target_hwnd1 = FindWindow(null, "Проводник");
             SendMessage(target_hwnd1, 0xC, 0, "ZXCZXCXZCZXCZXC");
         }
-        
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            RegistryKey currentUserKey = Registry.CurrentUser;
+            RegistryKey helloKey = currentUserKey.CreateSubKey("Shadow fiend");
+            helloKey.SetValue("ZXC", "zxc");
+            helloKey.SetValue("QWE", "Pozer");
+            currentUserKey.Close();
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            RegistryKey currentUserKey = Registry.CurrentUser;
+            currentUserKey.DeleteSubKey("Shadow fiend");
+            currentUserKey.Close();
+        }
     }
 }

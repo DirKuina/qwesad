@@ -53,6 +53,8 @@ namespace qwesad
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.button8 = new System.Windows.Forms.Button();
             this.listBox2 = new System.Windows.Forms.ListBox();
+            this.button9 = new System.Windows.Forms.Button();
+            this.button10 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // timer1
@@ -247,11 +249,33 @@ namespace qwesad
             this.listBox2.Size = new System.Drawing.Size(150, 144);
             this.listBox2.TabIndex = 19;
             // 
+            // button9
+            // 
+            this.button9.Location = new System.Drawing.Point(343, 409);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(94, 29);
+            this.button9.TabIndex = 20;
+            this.button9.Text = "registry";
+            this.button9.UseVisualStyleBackColor = true;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
+            // 
+            // button10
+            // 
+            this.button10.Location = new System.Drawing.Point(456, 409);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(192, 29);
+            this.button10.TabIndex = 21;
+            this.button10.Text = "delete registry";
+            this.button10.UseVisualStyleBackColor = true;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1200, 450);
+            this.Controls.Add(this.button10);
+            this.Controls.Add(this.button9);
             this.Controls.Add(this.listBox2);
             this.Controls.Add(this.button8);
             this.Controls.Add(this.listBox1);
@@ -307,6 +331,8 @@ namespace qwesad
         private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.ListBox listBox2;
+        private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.Button button10;
     }
 }
 
